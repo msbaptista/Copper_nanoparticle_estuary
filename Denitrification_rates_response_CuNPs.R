@@ -36,8 +36,7 @@ p14<-ggplot(dnf_data, aes(x=Conc, y=DNF, fill= Conc)) +
     axis.text.y  = element_text(size=16),
     legend.title = element_text(size=16),
     legend.text = element_text(size=16),
-    legend.position ="none") +
-  ggtitle("Potential denitrification rate NO2 + N2)")
+    legend.position ="none")
 
 p15<-ggplot(dnf_data, aes(x=Conc, y=NO2sed, fill= Conc)) + 
   geom_dotplot(binaxis="y", stackdir="center") +
@@ -53,8 +52,7 @@ p15<-ggplot(dnf_data, aes(x=Conc, y=NO2sed, fill= Conc)) +
     axis.text.y  = element_text(size=16),
     legend.title = element_text(size=16),
     legend.text = element_text(size=16),
-    legend.position ="none") +
-  ggtitle("N-NO2 consumption rate")
+    legend.position ="none")
 
 plot_grid6 <- plot_grid(p14,p15,
                         ncol=2, nrow=1)
